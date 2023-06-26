@@ -37,7 +37,7 @@ defmodule Explorer.TokenExchangeRatesTest do
 
       [_token_with_no_exchange_rate | tokens] =
         for _ <- 0..4 do
-          insert(:token)
+          insert(:token, fiat_value: nil)
         end
 
       coins_list =
@@ -102,7 +102,7 @@ defmodule Explorer.TokenExchangeRatesTest do
 
       [_token_with_no_exchange_rate | tokens] =
         for _ <- 0..4 do
-          insert(:token)
+          insert(:token, fiat_value: nil)
         end
 
       Bypass.expect_once(bypass, "GET", "/coins/list", fn conn ->
@@ -127,7 +127,7 @@ defmodule Explorer.TokenExchangeRatesTest do
 
       [_token_with_no_exchange_rate | tokens] =
         for _ <- 0..4 do
-          insert(:token)
+          insert(:token, fiat_value: nil)
         end
 
       coins_list =
@@ -182,7 +182,7 @@ defmodule Explorer.TokenExchangeRatesTest do
 
       [_token_with_no_exchange_rate | tokens] =
         for _ <- 0..4 do
-          insert(:token)
+          insert(:token, fiat_value: nil)
         end
 
       Bypass.expect_once(bypass, "GET", "/coins/list", fn conn ->
@@ -207,7 +207,7 @@ defmodule Explorer.TokenExchangeRatesTest do
 
       [_token_with_no_exchange_rate | tokens] =
         for _ <- 0..4 do
-          insert(:token)
+          insert(:token, fiat_value: nil)
         end
 
       coins_list =
